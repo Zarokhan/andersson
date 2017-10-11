@@ -28,10 +28,22 @@ a:active {
     clear: both;
 }
 
-.mainHeader img {
-    width: 80%;
+.mainsHeader img {
+    max-width: 726px;
+    width: 100%;
     height: auto;
-    margin: 2% 10%;
+}
+
+#hpart1 img {
+    max-width: 174px;
+    width: 100%;
+    height: auto;
+}
+
+#hpart2 img {
+    max-width: 555px;
+    width: 100%;
+    height: auto;
 }
 
 .mainHeader nav {
@@ -199,14 +211,31 @@ a:active {
     color: #FFF;
 }
 
+.phonehidden {
+
+}
+
+@media only screen and (min-width: 150px) and (max-width: 1046px) {
+    .phonehidden {
+        height: 0;
+        width: 0;
+    }
+    .mainHeader img {
+        margin: 0 auto;
+        display: auto;
+    }
+}
+
 @media only screen and (min-width: 150px) and (max-width: 600px) {
     .body {
         width: 90%;
         font-size: 95%;
     }
+    .phonehidden {
+        height: 0;
+    }
     .mainHeader img {
         width: 100%;
-        margin: 2% 0%;
     }
     .mainHeader nav {
         height: 120px;
