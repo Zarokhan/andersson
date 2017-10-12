@@ -4,6 +4,7 @@ body {
     font-family: arial, 'Lucida Sans Unicode';
     line-height: 1.5;
     text-align: left;
+    margin: 0 0;
 }
 
 a {
@@ -21,17 +22,29 @@ a:active {
     color: #FFF;
 }
 
-.body {
-    background-color: #DDD;
+.container {
+    
     margin: 0 auto;
     width: 70%;
     clear: both;
 }
 
-.mainsHeader img {
-    max-width: 726px;
-    width: 100%;
-    height: auto;
+.mainHeader {
+        background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4), 
+            rgba(0, 0, 0, 0.4)
+        ),
+        url('../images/code.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.mainHeader img {
+    margin: 40px 0;
 }
 
 #hpart1 img {
@@ -49,9 +62,6 @@ a:active {
 .mainHeader nav {
     background-color: #005E7D;
     height: 40px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
 }
 
 .mainHeader nav ul {
@@ -62,8 +72,10 @@ a:active {
 .mainHeader nav ul li {
     float: left;
     display: inline;
-    //font-weight: bold;
-    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .mainHeader nav a:link,
@@ -138,7 +150,7 @@ a:active {
 }
 
 .topContent {
-    background-color: #FFF;
+    background-color: #DDD;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -194,18 +206,14 @@ a:active {
     padding: 2% 3%;
 }
 
-.mainFooter {
+.footer {
     width: 100%;
     height: 40px;
     float: left;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #666;
-    margin: 2% 0;
+    background-color: #111;
 }
 
-.mainFooter p {
+.footer p {
     width: 92%;
     margin: 10px auto;
     color: #FFF;
@@ -215,27 +223,32 @@ a:active {
 
 }
 
-@media only screen and (min-width: 150px) and (max-width: 1046px) {
+@media only screen and (min-width: 600px) and (max-width: 1060px) {
     .phonehidden {
         height: 0;
         width: 0;
     }
     .mainHeader img {
-        margin: 0 auto;
+        margin: 20px auto;
         display: auto;
     }
 }
 
 @media only screen and (min-width: 150px) and (max-width: 600px) {
-    .body {
+    .container {
         width: 90%;
         font-size: 95%;
+    }
+    .navcontainer {
+        width: 100%;
+        font-weight: bold;
     }
     .phonehidden {
         height: 0;
     }
     .mainHeader img {
         width: 100%;
+        margin: 10px auto;
     }
     .mainHeader nav {
         height: 120px;
@@ -249,9 +262,6 @@ a:active {
         text-align: center;
     }
     .mainHeader nav ul li a {
-        border-radius: 5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
     }
     .mainHeader nav a:link,
     .mainHeader nav a:visited {
